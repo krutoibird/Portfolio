@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arsen's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <div class="logo">Portfolio</div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <img src="apic.jpg" alt="Arsen" />
+  <div>
+    <h1>Hi, I'm <span>Arsen</span></h1>
+    <p>High school senior into coding.</p>
+    <div class="btns">
+      <a href="#projects" class="btn1">My Projects</a>
+      <a href="#contact" class="btn2">Contact Me</a>
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>I'm an international high school senior who's lived in Canada for almost 3 years. I started coding about 2 years ago and haven't stopped since, building things like a real-time detection device on a Raspberry Pi and a full website from scratch. Outside of tech, I enjoy spending time with people and my family.</p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="tags">
+    <span>Python</span>
+    <span>HTML & CSS</span>
+    <span>YOLOv8 / OpenCV</span>
+    <span>Raspberry Pi</span>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+
+    <div class="box">
+      <h3>FocusBot</h3>
+      <p><b>Problem:</b> I kept getting distracted by my phone while working and wanted something that would actually catch me in the act, not just a screen-time number at the end of the day.</p>
+      <p><b>Action:</b> I built a desk device on a Raspberry Pi 5 that uses YOLOv8 to detect phone use in real time. If a phone is visible for more than 5 seconds, it triggers a visual alert and plays an AI-generated voice reminder through the Groq API.</p>
+      <p><b>Result:</b> A working device that detects phone use live and tracks distraction time and alert count per session, giving me real feedback on my focus habits.</p>
+      <p class="stack">Python · YOLOv8 · Groq API · Raspberry Pi · TTS</p>
+      <video src="record.mov" controls width="100%"></video>
+      <div class="challenges">
+        <div class="challenges-title">Challenges</div>
+        <ul>
+          <li>The camera cable kept corrupting the SD card, which meant reinstalling everything from scratch multiple times</li>
+          <li>Had to manually configure the speaker to get audio working</li>
+          <li>A small code mistake caused the program to crash on every frame with no detections</li>
+          <li>The AI model I was using got shut down mid-project and I had to switch to a different one</li>
+          <li>The Pi kept getting blocked when making API requests - fixed it by changing how the request identified itself</li>
+          <li>Ran out of storage on the Pi mid-install and had to find a workaround</li>
+        </ul>
+      </div>
+      <a href="https://docs.google.com/document/d/1M6381-nf_eKf-arDNhx1NnOI7vO8lv-y5VrXFxAL2Qs/edit" target="_blank">Doc</a>
+    </div>
+
+    <div class="box">
+      <h3>SWIFT Program Website</h3>
+      <p><b>Problem:</b> Prospective Grade 11/12 students had no central place to learn about the SWIFT program — the main source was a physical poster.</p>
+      <p><b>Action:</b> My group partner and I built a 6-page website covering admissions, field trips, projects, and staff, with a reusable JS navbar and an embedded live Google Calendar.</p>
+      <p><b>Result:</b> A complete informational site that gives prospective students one clear place to understand the program.</p>
+      <p class="stack">HTML · CSS · JavaScript · Google Calendar API</p>
+      <div class="challenges">
+        <div class="challenges-title">Behind the Scenes</div>
+        <ul>
+          <li>Information about the program was limited — the main source was a physical poster, leaving some pages sparse</li>
+          <li>All layout and styling was done by hand in CSS with no framework — spacing, alignment, and consistency across 6 pages required a lot of trial and error</li>
+          <li>Built a reusable navbar component in JavaScript that loads dynamically across all pages</li>
+        </ul>
+      </div>
+      <a href="swift/index.html">View Site</a>
+      <br>
+      <a href="https://github.com/AnnuTamilarasu/SWIFT.git" target="_blank">GitHub</a>
+      <br>
+      <a href="https://docs.google.com/document/d/1UbFkyX2bjrQRY6q1Z7Osp3TZOiqbDh20Gl-IJcP8b7o/edit" target="_blank">Design Log</a>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>Feel free to reach out: <a href="mailto:arsenkanalinov@gmail.com">arsenkanalinov@gmail.com</a></p>
+</section>
+
+<footer>© 2026 Arsen Kanalinov</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
